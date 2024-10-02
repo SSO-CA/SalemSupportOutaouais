@@ -6,7 +6,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 <PrimaryLayout title="Bénévolat">
     <div class="volunteer-form container">
         <h1>Demande d'Adhésion de Bénévole pour Salem Support Outaouais (SSO)</h1>
-        <form class="form-format" name="volunteer-application" method="POST" data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/success/" />
+        <form class="form-format" name="volunteer-application" method="POST" data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/success/">
             <!-- Honeypot -->
             <input name="bot-field" style="display: none;">
 
@@ -100,7 +100,6 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
                     <input type="checkbox" required name="Autorisation et Confirmation" id="authorization">
                     <label for="authorization">J'autorise SSO à vérifier les informations fournies si nécessaire et je confirme que les informations ci-dessus sont correctes.</label>
                 </div>
-                
             </div>
             <button class="submit-btn form-group">Envoyer</button>
         </form>
