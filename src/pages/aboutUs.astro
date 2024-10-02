@@ -1,0 +1,267 @@
+---
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+
+---
+
+<PrimaryLayout title="À propos de nous">
+    <!--HERO SECTION-->
+    <div class="hero_section container">
+        <picture class="hero_img">
+            <img src="images/ssoh1.webp" alt="">
+        </picture>
+        <div class="hero_content">
+            <h1>SALEM SUPPORT OUTAOUAIS</h1>
+            <p>Nous sommes une organisation dédiée à soutenir et renforcer la communauté de Gatineau et de la région de l’Outaouais. Notre mission est de fournir une assistance essentielle aux sans-abris, aux personnes vulnérables, aux nouveaux arrivants et à la communauté dans son ensemble, en mettant l'accent sur l'amélioration du bien-être, l'intégration sociale et la résilience face aux catastrophes naturelles.</p>
+        </div>
+    </div>
+
+    <div class="service_section_bcg">
+        <div class="service_section container">
+            <div class="card">
+                <img src="images/mission.webp" alt="">
+                <div class="content">
+                    <h4>Mission</h4>
+                    <hr style="color: rgb(255, 255, 255);">
+                    <p>Notre mission est de créer une communauté plus forte et plus résiliante en offrant un soutien essentiel, des besoins de base, de l'orientation et du bénévolat lorsque le besoin s'en fait le plus sentir.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/vision.webp" alt="">
+                <div class="content">
+                    <h4>Vision</h4>
+                    <hr style="color: rgb(255, 255, 255);">
+                    <p>Créer un avenir durable pour tous en répondant aux besoins essentiels et en cultivant l'indépendance et la résilience des individus et des familles. Nous y avons droit!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/implication.WEBP" alt="">
+                <div class="content">
+                    <h4>Valeurs</h4>
+                    <hr style="color: rgb(255, 255, 255);">
+                    <p>La SSO s’articule autour de quatre valeurs essentielles : Respect, Engagement, Solidarité et Intégrité. Nous valorisons chaque individu, soutenons les plus vulnérables, promouvons l’entraide, et agissons avec transparence. Ces principes guident toutes nos initiatives pour renforcer la communauté.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="informational-zone ">
+        <h1>Nos Objectifs</h1>
+        <div class="informational_section container">
+            <picture class="informational_img">
+                <img src="images/soutien.webp" alt="">
+            </picture>
+            <div class="informational_content1">
+                <h1>Soutien aux sans-abris et aux personnes vulnérables</h1>
+                <p>Nous fournissons de la nourriture, des vêtements (notamment des articles d'hiver), des services de subsistance et un soutien essentiel pour améliorer le bien-être des personnes dans le besoin.</p>
+            </div>
+        </div>
+        <div class="informational_section container">
+            <picture class="informational_img">
+                <img src="images/accompagnement.webp" alt="">
+            </picture>
+            <div class="informational_content2">
+                <h1>Résilience communautaire</h1>
+                <p>Nous mobilisons des bénévoles et des ressources pour soutenir la communauté en cas de catastrophes naturelles, telles que les inondations et les tempêtes hivernales.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="informational-zone methode">
+        <h1>Notre Methode</h1>
+        <div class="informational_section-noimg container">
+            <div class="informational_content">
+                <div>
+                    <h3>Centres de distribution et services de soutien</h3>
+                    <p>Nous avons établi des centres de distribution de nourriture et de vêtements, ainsi que des services d'orientation pour les nouveaux arrivants.</p>
+                </div>
+                <div>
+                    <h3>Partenariats et réseaux de bénévoles</h3>
+                    <p>Nous collaborons avec des organisations locales, des refuges, des établissements d'enseignement et des groupes communautaires pour maximiser notre impact. De plus, nous recrutons et formons des bénévoles pour fournir une assistance en cas de catastrophe naturelle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="informational-zone impact">
+        <h1>Notre Impact</h1>
+        <div class="informational_section-noimg container">
+            <div class="informational_content">
+                <div>
+                    <h3>Amélioration du bien-être</h3>
+                    <p>En répondant aux besoins des personnes vulnérables et des nouveaux arrivants, nous contribuons à améliorer la qualité de vie et l'intégration sociale.</p>
+                </div>
+                <div>
+                    <h3>Cohésion communautaire</h3>
+                    <p>Nos efforts favorisent un sentiment de solidarité et de soutien mutuel parmi les résidents, les nouveaux arrivants et les bénévoles.</p>
+                </div>
+                <div>
+                    <h3>Résilience aux catastrophes</h3>
+                    <p>En nous préparant à réagir aux catastrophes naturelles, nous réduisons l'impact sur les résidents de la communauté et renforçons notre capacité à faire face à de telles situations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</PrimaryLayout>
+
+<style>
+
+/*=============== Service-INDEX ===============*/
+.hero_section{
+  display: grid;
+  padding-bottom: 4rem;
+}
+
+.hero_section > .hero_content {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  margin-inline: auto;
+}
+
+.hero_section img{
+  margin-inline: auto;
+  border-radius: .5rem;
+}
+
+.service_section_bcg{
+  background-color: var(--bcg-gray-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.service_section{
+  display: grid;
+  gap: 1rem;
+  
+}
+.service_section > .card{
+  border-radius: .5rem;
+  background-color: white;
+
+}
+.service_section > .card img{
+  border-radius: .5rem .5rem 0rem 0rem;
+  width: 100%;
+
+}
+.service_section > .card .content{
+  padding: 1rem;
+
+}
+
+/*=============== Informational-SSO ===============*/
+.informational-zone{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.methode{
+  background-color:var(--bcg-gray-color);
+}
+.informational-zone > H1{
+  text-align: center;
+}
+.informational_section{
+  display: grid;
+  padding-bottom: 4rem;
+}
+
+.informational_section > .informational_content {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  margin-inline: auto;
+}
+
+.informational_section img{
+  margin-inline: auto;
+  border-radius: .5rem;
+}
+
+
+@media (width > 1118px){
+    .informational_section{
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .informational_section > .informational_content1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .informational_section > .informational_content2{
+    grid-column: 0;
+    grid-row: 0;
+  }
+
+  .informational_section > .informational_content h1{
+    font-size: 3.5rem;
+    font-weight: var(--font-light);
+  }
+  .informational_section > .informational_content h3{
+    font-size: 1.5rem;
+  }
+  .informational_img img{
+    margin-inline: auto;
+    width: 500px;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  /* Service Section*/
+  .service_section_bcg{
+    background-color: var(--bcg-gray-color);
+  }
+  .service_section{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+  .service_section > .card{
+    border-radius: .5rem;
+    background-color: white;
+
+  }
+  .service_section > .card img{
+    border-radius: .5rem .5rem 0rem 0rem;
+
+  }
+  .service_section > .card .content{
+    padding: 1rem;
+
+  }
+
+  /*Hero*/
+  .hero_section{
+    margin-top: 9rem;
+    padding-bottom: 6rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr .75fr;
+    align-items: center;
+  }
+  .hero_section > .hero_content{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero_section > .hero_content h1{
+    font-size: 3.5rem;
+    font-weight: var(--font-light);
+  }
+  .hero_section > .hero_content h3{
+    font-size: 1.5rem;
+  }
+  .hero_img img{
+    margin-inline: auto;
+    width: 500px;
+    height: auto;
+    border-radius: 1rem;
+  }
+}
+
+</style>
+

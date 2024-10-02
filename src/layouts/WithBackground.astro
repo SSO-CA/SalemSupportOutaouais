@@ -1,0 +1,35 @@
+---
+---
+
+<div class="service_section_bcg  section-margin-end">
+    <div class="service_section section-padding  container">
+        <slot />
+    </div>
+</div>
+
+<style>
+
+.service_section_bcg{
+  background-color: var(--bcg-gray-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.service_section{
+  display: grid;
+  gap: 1rem;
+  
+}
+
+@media (width > 800px) {
+    /* Service Section*/
+  .service_section_bcg{
+    background-color: var(--bcg-gray-color);
+  }
+  .service_section{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+</style>

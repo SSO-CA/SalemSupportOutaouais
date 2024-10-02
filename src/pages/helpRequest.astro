@@ -1,0 +1,80 @@
+---
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+
+---
+
+<PrimaryLayout title="Demande d'aide">
+    <div class="help-request-form container">
+        <h1>Demande d'Aide - Programme Salem Solidarité</h1>
+        <form name="financial-assistance" method="POST" data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/success/"/>
+            <!-- Honeypot -->
+            <input name="bot-field" style="display: none;">
+
+            <div class="form-group">
+                <label for="full-name">Nom Complet</label>
+                <input class="input" required placeholder="Nom et Prénom" type="text" name="Nom Complet" id="full-name">
+            </div>
+            <div class="form-group">
+                <label for="address">Adresse</label>
+                <input class="input" required placeholder="Adresse" type="text" name="Adresse" id="address">
+            </div>
+            <div class="form-group">
+                <label for="phone">Numéro de téléphone</label>
+                <input class="input" required placeholder="Numéro de téléphone" type="tel" name="Numéro de téléphone" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">Adresse email</label>
+                <input class="input" required placeholder="email@address.com" type="email" name="Adresse email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="situation">Décrivez votre situation actuelle qui nécessite une aide financière</label>
+                <textarea class="input" required name="Situation actuelle" id="situation" placeholder="Détaillez les circonstances..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="assistance">Nature de l'aide demandée</label>
+                <select class="input" name="Nature de l'aide demandée" id="assistance">
+                    <option value="Paiement de loyer">Paiement de loyer</option>
+                    <option value="Paiement d'hypothèque">Paiement d'hypothèque</option>
+                    <option value="Factures médicales">Factures médicales</option>
+                    <option value="Autres dépenses urgentes">Autres dépenses urgentes (précisez)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount">Montant demandé (CAD)</label>
+                <input class="input" required type="number" placeholder="Montant demandé" name="Montant demandé" id="amount">
+            </div>
+            <div class="form-group">
+                <label for="documents">Joignez tout document justificatif</label>
+                <input class="input" required type="file" name="Documents justificatifs" id="documents" multiple>
+            </div>
+            <div class="form-group">
+              <div>
+                <label for="declaration">Déclaration de véracité</label>
+              </div>
+              <div class="labels-and-checks">
+                <input type="checkbox" required name="Déclaration de véracité" id="declaration">
+                <label for="declaration">Je déclare que toutes les informations fournies dans cette demande sont vraies et exactes.</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div>
+                <label for="consent">Consentement à l'évaluation</label>
+              </div>
+              <div class="labels-and-checks">
+                <input type="checkbox" required name="Consentement à l'évaluation" id="consent">
+                <label for="consent">J'accepte que les informations fournies soient évaluées par le comité.</label>
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="signature">Signature du Demandeur</label>
+                <input class="input" required placeholder="Signature" type="text" name="Signature du Demandeur" id="signature">
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input class="input" required placeholder="Date" type="date" name="Date" id="date">
+            </div>
+            <button class="submit-btn form-group">Envoyer</button>
+        </form>
+    </div>
+
+</PrimaryLayout>

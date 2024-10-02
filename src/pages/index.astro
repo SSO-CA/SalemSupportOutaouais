@@ -1,0 +1,32 @@
+---
+import Hero from "../components/Hero.astro"
+import VCard from "../components/VCard.astro"
+import PrimaryLayout from "../layouts/PrimaryLayout.astro"
+import WithBackground from "../layouts/WithBackground.astro"
+---
+
+<PrimaryLayout title = "Acceuil">
+ <Hero class="section-margin-end" />
+
+ <WithBackground>
+    <VCard 
+      img="/images/donner.WEBP" 
+      title="Donner"
+      paragraph="Contribuez à la mission de Salem Support Outaouais. Vos dons permettent de fournir des services essentiels et d’améliorer la qualité de vie des personnes vulnérables de notre communauté." 
+    />
+    <VCard 
+      img="/images/support.WEBP" 
+      title="Demande de support"
+      paragraph="Besoin d’aide? Nous sommes là pour vous. Contactez-nous pour accéder à nos services de soutien, y compris les besoins de base, l’orientation et l’assistance en cas de crise." 
+    />
+    <VCard 
+      img="/images/implication.WEBP" 
+      title="S'impliquer"
+      paragraph="Faites une différence! Rejoignez notre équipe de bénévoles et participez activement à la création d’une communauté plus forte et plus résiliente. Votre engagement compte!" 
+    />
+ </WithBackground>
+</PrimaryLayout>
+
+
+<style>
+</style>

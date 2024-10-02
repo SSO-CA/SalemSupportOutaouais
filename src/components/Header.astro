@@ -1,0 +1,135 @@
+
+<script>
+    const navToggle = document.querySelector('[aria-controls="primary-nav"]') as HTMLElement;
+    navToggle.addEventListener('click', () => {
+        const navOpened = navToggle.getAttribute("aria-expanded");
+        if (navOpened === "false") {
+            navToggle.setAttribute("aria-expanded", 'true');
+        } else {
+            navToggle.setAttribute("aria-expanded", 'false');
+        }
+    })
+</script>
+<div class="header">
+    <header class="base-layout container">
+        <h1 class="visually-hidden">Salem Support Outaouais</h1>
+        <a href="/" class="logo">
+            <img class="logo" src="/images/Logo_Full.png" alt="">
+        </a>
+        <button aria-controls="primary-nav" aria-expanded="false">
+            <span class="visually-hidden">Menu</span>
+            <img src="/images/menu.svg" alt="" class="icon-menu">
+            <img src="/images/close.svg" alt="" class="icon-close">
+        </button>
+        <nav id="primary-nav">
+            <ul>
+                    <li><a href="/">Acceuil</a></li>
+                    <li><a href="/joinUs">Nous&nbsp;Joindre</a></li>
+                    <li><a href="/helpRequest">Aide</a></li>
+                    <li><a href="/volunteerRequest">Benevolat</a></li>
+                    <li><a href="#">Activite</a></li>
+                    <li><a href="/aboutUs">SSO</a></li>
+                    <li><a href="https://www.paypal.com/donate/?hosted_button_id=DJR49SARK8EZ2" class="donate"> Donate</a></li>
+                </ul>
+            </nav>
+    </header>
+</div>
+
+
+
+<style>
+
+    .header{
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.1);
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        gap: 1rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: currentColor;
+
+        &:hover,
+        &:focus-visible {
+            color: var(--clr-accent);
+        }
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    .donate{
+        background-color: rgb(255, 207, 32);
+        border-radius: 0.5rem;
+        padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    }
+
+    button {
+        display: none;
+    }
+
+    @media (width < 750px) {
+        button {
+            display: block;
+            position: absolute;
+            z-index: 10;
+            right: 1rem;
+            background: transparent;
+            border: 0;
+
+            .icon-close {
+                display: none;
+            }
+        }
+        nav {
+            display: none;
+        }
+
+        [aria-expanded='true'] { 
+            .icon-close {
+                display: block;
+            }
+            .icon-menu {
+                display: none;
+            }
+        }
+
+        [aria-expanded='true'] + nav {
+            display: block;
+            position: absolute;
+            height: 100dvh;
+            inset: 0;
+            width: 80%;
+            margin-left: auto;
+            z-index: 1;
+            background-color: var(--clr-neutral-white);
+            box-shadow: 0 0 0 100vmax hsl(0 0 0 / .3);
+            
+            ul{
+                display: grid;
+                gap: 2rem;
+                font-size: medium;
+                margin-top: 20vh;
+                margin-left: 3rem;
+            }
+        }
+    }
+</style>

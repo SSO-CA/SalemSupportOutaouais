@@ -1,0 +1,28 @@
+---
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+
+---
+
+<PrimaryLayout title="Join Us">
+    <div class="join-us-form container">
+        <form name="join-us" method="POST" data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/success/">
+        
+              <!-- Honeypot -->
+              <input name="bot-field" style="display: none;">
+
+             <div class="form-group">
+                 <label for="name">Nom complet</label>
+                 <input class="input" required placeholder="Nom et Prénom" type="text" name="Nom&nbsp;et&nbsp;Prénom" id="name">
+             </div>
+             <div class="form-group">
+                 <label for="email">Email</label>
+                 <input class="input" required placeholder="email@address.com" type="email" name="Email" id="email">
+             </div>
+             <div class="form-group">
+                 <label for="Message">Message</label>
+                 <textarea class="input" name="Message" id="textarea"></textarea>
+             </div>
+             <button class="submit-btn form-group">Envoyer</button>
+        </form>
+     </div>
+</PrimaryLayout>

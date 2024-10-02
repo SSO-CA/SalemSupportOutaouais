@@ -1,0 +1,108 @@
+---
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+
+---
+
+<PrimaryLayout title="Bénévolat">
+    <div class="volunteer-form container">
+        <h1>Demande d'Adhésion de Bénévole pour Salem Support Outaouais (SSO)</h1>
+        <form class="form-format" name="volunteer-application" method="POST" data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/success/" />
+            <!-- Honeypot -->
+            <input name="bot-field" style="display: none;">
+
+            <div class="form-group">
+                <label for="full-name">Nom et Prénom</label>
+                <input class="input" required placeholder="Nom et Prénom" type="text" name="Nom et Prénom" id="full-name">
+            </div>
+            <div class="form-group">
+                <label for="address">Adresse</label>
+                <input class="input" required placeholder="Adresse" type="text" name="Adresse" id="address">
+            </div>
+            <div class="form-group">
+                <label for="city-province-postal">Ville, Province, Code Postal</label>
+                <input class="input" required placeholder="Ville, Province, Code Postal" type="text" name="Ville, Province, Code Postal" id="city-province-postal">
+            </div>
+            <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input class="input" required placeholder="Téléphone" type="tel" name="Téléphone" id="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="input" required placeholder="email@address.com" type="email" name="Email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="availability-days">Jours disponibles</label>
+                <div id="availability-days">
+                    <div class="days-and-checks">
+                        <label for="lundi">Lundi</label> <input  type="checkbox" name="Lundi" id="lundi">
+                    </div>
+                    <div class="days-and-checks">
+                        <label for="mardi">Mardi</label> <input type="checkbox" name="Mardi" id="mardi">
+                    </div>
+                    <div class="days-and-checks">
+                        <label for="mercredi">Mercredi</label> <input type="checkbox" name="Mercredi" id="mercredi">
+                    </div>
+                    <div class="days-and-checks">
+                        <label for="jeudi">Jeudi</label> <input type="checkbox" name="Jeudi" id="jeudi">
+                    </div>
+                    <div class="days-and-checks">
+                        <label for="vendredi">Vendredi</label> <input type="checkbox" name="Vendredi" id="vendredi">
+                    </div>
+                    <div class="days-and-checks">
+                        <label for="samedi">Samedi</label> <input type="checkbox" name="Samedi" id="samedi">
+                    </div>
+                    <div class="days-and-checks">
+                        <label for="dimanche">Dimanche</label> <input type="checkbox" name="Dimanche" id="dimanche">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="availability-hours">Heures disponibles</label>
+                <input class="input" required placeholder="Heures disponibles" type="text" name="Heures disponibles" id="availability-hours">
+            </div>
+            <div class="form-group">
+                <label for="interests">Intérêts de bénévolat</label>
+                <select class="input" name="Intérêts de bénévolat" id="interests">
+                    <option value="Assistance aux nouveaux arrivants">Assistance aux nouveaux arrivants</option>
+                    <option value="Distribution alimentaire">Distribution alimentaire</option>
+                    <option value="Soutien administratif">Soutien administratif</option>
+                    <option value="Organisation d'événements">Organisation d'événements</option>
+                    <option value="Autres">Autres (précisez)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience">Expérience et compétences</label>
+                <textarea class="input" name="Expérience et compétences" id="experience" placeholder="Décrivez toute expérience pertinente et/ou compétences spéciales"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="why-volunteer">Pourquoi souhaitez-vous devenir bénévole chez SSO ?</label>
+                <textarea class="input" name="Pourquoi bénévole" id="why-volunteer" placeholder="Expliquez vos motivations"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="commitment">Engagement</label>
+                <p>Je m'engage à respecter les valeurs et la mission de la SSO et à contribuer positivement aux activités pour lesquelles je me porte volontaire.</p>
+                <div class="form-group-sub">
+                    <div class="form-group-sub2">
+                        <label for="signature">Signature</label>
+                        <input class="input" required placeholder="Signature" type="text" name="Signature" id="signature">
+                    </div>
+                    <div class="form-group-sub2">
+                        <label for="date">Date</label>
+                        <input class="input" required placeholder="Date" type="date" name="Date" id="date">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="authorization">Autorisation et Confirmation</label>
+                </div>
+                <div class="labels-and-checks">
+                    <input type="checkbox" required name="Autorisation et Confirmation" id="authorization">
+                    <label for="authorization">J'autorise SSO à vérifier les informations fournies si nécessaire et je confirme que les informations ci-dessus sont correctes.</label>
+                </div>
+                
+            </div>
+            <button class="submit-btn form-group">Envoyer</button>
+        </form>
+    </div>
+</PrimaryLayout>

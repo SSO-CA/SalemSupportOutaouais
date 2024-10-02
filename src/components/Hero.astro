@@ -1,0 +1,85 @@
+---
+const { class: className } = Astro.props
+---
+
+
+<div class:list={[className, "hero-container", "container"]}>
+    <article class="section-padding">
+        <img src="images/hands.jpg" alt="">
+        <div class="hero-content">
+            <h1>SALEM SUPPORT OUTAOUAIS</h1>
+            <h3>Votre bien-être est le notre!</h3>
+            <p>Notre mission est de créer une communauté plus forte et plus résiliante en offrant un soutien essentiel, des besoins de base, de l'orientation et du bénévolat lorsque le besoin s'en fait le plus sentir.</p>
+            
+            <a href="#">En savoir plus sur la SSO</a>
+        </div>
+    </article>
+</div>
+
+
+<style>
+    .hero-container{
+        container-type: inline-size;
+    }
+
+    article{
+        display: grid;
+        gap: 2rem;
+            @container (width > 800px){
+                grid-template-columns: 1fr .65fr;
+                align-items: center;
+            }       
+    }
+
+    .hero-content{
+            @container (width > 800px) {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        font-weight: var(--fw-light);
+        margin-bottom: 0.5rem;
+            @container (width > 800px) {
+                font-size: 3.5rem;
+                font-weight: var(--fw-light);
+                margin-bottom: 1rem;
+            }
+    }
+
+    .hero-content h3{
+        font-size: 1.3rem;
+        font-style: italic;
+        font-weight: var(--fw-light);
+        margin-bottom: 0.5rem;
+            @container (width > 800px) {
+                font-size: 1.5rem;
+                font-weight: var(--fw-bold);
+                margin-bottom: 1rem;
+            }
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    a{
+        margin-top: 2rem;
+        text-decoration: none;
+        color: var(--clr-accent);
+
+        &:hover,
+        &:focus-visible {
+            color: rgb(0, 145, 255);
+        }
+    }
+
+    img{
+        border-radius: var(--brd-radius);
+    }
+
+</style>
